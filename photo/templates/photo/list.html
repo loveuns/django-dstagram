@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}- List{% endblock %}
+
+{% block content %}
+{% for post in object_list %}
+<div class="card m-3 mx-auto" style="max-width:500px;">
+    <img class="card-img-top img-fluid" src="{{post.photo.url}}" style="width:100%;">
+    <div class="card-body">
+        <h4>{{post.author.username}}</h4>
+        <p>{{post.text|linebreaksbr}}</p>
+        <a href="{% url 'photo:detail' pk=post.id %}" class="btn btn-success">댓글 달기</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

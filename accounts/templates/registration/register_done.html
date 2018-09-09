@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}- Registration Done{% endblock %}
+
+{% block content %}
+    <div class="alert alert-info">Registration Success. Welcome, <strong>{{user.username}}</strong></div>
+    <a class="btn btn-info" href="{% url 'accounts:login' %}">Click to Login</a>
+{% endblock %}
