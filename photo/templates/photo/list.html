@@ -2,6 +2,14 @@
 {% block title %}- List{% endblock %}
 
 {% block content %}
+<div class="text-center">
+    {% load tagging_tags %}
+    {% tag_cloud_for_model photo.Photo as tags %}
+    {% for tag in tags %}
+    <a class="font-weight-light p-2" href="{% url 'photo:list_tag' tag=tag.name %}">#{{tag.name}}</a>
+    {% endfor %}
+</div>
+
 {% for post in object_list %}
 <div class="card m-3 mx-auto" style="max-width:500px;">
     <img class="card-img-top img-fluid" src="{{post.photo.url}}" style="width:100%;">

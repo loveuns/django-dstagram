@@ -1,6 +1,7 @@
 from django.db import models
 
 from django.contrib.auth.models import User
+from tagging.fields import TagField
 
 
 class Photo(models.Model):
@@ -9,6 +10,7 @@ class Photo(models.Model):
     photo = models.ImageField(
         upload_to='photos/%Y/%m/%d', blank=False, default='photos/no_image.png')
     text = models.TextField()
+    tag = TagField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

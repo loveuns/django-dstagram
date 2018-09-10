@@ -21,6 +21,7 @@
 ### Tech
 
 - Web framework : Django (Python), Bootstrap
+- 플랫폼 : 네아로, Disqus
 - 인프라 : Heroku, Postgres, AWS S3
 
 ### Reference
@@ -30,3 +31,4 @@
 - Bootstrap : https://getbootstrap.com/
 - Heroku : https://www.heroku.com/
 - Naver Dev Center : https://developers.naver.com/
+- Disqus : https://disqus.com/

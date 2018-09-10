@@ -5,9 +5,16 @@
 <div class="container">
     <img src="{{object.photo.url}}" class="w-100">
     <div class="d-flex mt-2">
-        <button type="button" class="btn btn-sm btn-outline-primary">
-            {{object.author.username}}</button>
-        <p class="ml-2">{{object.text|linebreaksbr}}</p>
+        <p class="text-white bg-primary rounded p-2 mr-2">{{object.author.username}}</p>
+        <p class="mr-2">
+            {% load tagging_tags %}
+            {% tags_for_object object as tags %}
+            {% for tag in tags %}
+            <a href="{% url 'photo:list_tag' tag=tag.name %}">
+                #{{tag.name}}</a>
+            {% endfor %}
+        </p>
+        <p>{{object.text|linebreaksbr}}</p>
     </div>
     <div class="d-flex mt-2">
         <a href="{% url 'photo:delete' pk=object.id %}" class="btn btn-danger mr-1">
@@ -18,7 +25,7 @@
 </div>
 
 <div class="container mt-4">
-    { % load disqus_tags %}
-    { % disqus_show_comments %}
+    {% load disqus_tags %}
+    {% disqus_show_comments %}
 </div>
 {% endblock %}

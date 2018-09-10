@@ -25,7 +25,8 @@
                     <li class="nav-item"><a href="{% url 'photo:upload_1' %}" class="nav-link">Upload</a></li>
                     <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="nav-link">Logout</a></li>
                     {% else %}
-                    <li class="nav-item"><a href="{% url 'accounts:login' %}" class="nav-link">Login</a></li>
+                    {% comment %} <li class="nav-item"><a href="{% url 'accounts:login' %}" class="nav-link">Login</a></li> {% endcomment %}
+                    <li class="nav-item"><a href="{% url 'account_login' %}" class="nav-link">Login</a></li>
                     <li class="nav-item"><a href="{% url 'accounts:register' %}" class="nav-link">Register</a></li>
                     {% endif %}
                 </ul>
