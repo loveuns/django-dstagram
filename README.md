@@ -2,7 +2,7 @@
 
 ### 결과물
 
-- URL : 
+- URL : https://django-dstagram.herokuapp.com
 - 기능
   - 이미지 업로드, 수정, 삭제
   - 로그인, 로그아웃, 회원가입
@@ -26,7 +26,7 @@
 
 ### Reference
 
-- (원본) https://github.com/flashmaestro/dstagram
+- (원본) https://github.com/flashmaestro/dstagram7
 - Django : https://www.djangoproject.com/
 - Bootstrap : https://getbootstrap.com/
 - Heroku : https://www.heroku.com/
